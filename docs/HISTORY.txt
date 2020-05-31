@@ -1,6 +1,14 @@
 Changelog
 =========
 
+1.1.1+wcc.1 2020-05-31
+----------------------
+
+- comment out code removing dashes from ids of translated items if
+  normalized ids have two characters at the end
+  [h2o]
+
+
 1.1.1 2013-07-03
 ----------------
 
