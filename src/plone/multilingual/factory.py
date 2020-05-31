@@ -71,9 +71,10 @@ class DefaultTranslationIdChooser(object):
     def __call__(self, parent, language):
         content_id = self.context.getId()
         splitted = content_id.split('-')
+        # commented-off since removal of dashes is not desired by wcc
         # ugly heuristic (searching for something like 'de', 'en' etc.)
-        if len(splitted) > 1 and len(splitted[-1]) == 2:
-            content_id = ''.join(splitted[:-1])
+        #if len(splitted) > 1 and len(splitted[-1]) == 2:
+        #    content_id = ''.join(splitted[:-1])
         while content_id in parent.objectIds():
             content_id = "%s-%s" % (content_id, language)
         return content_id
